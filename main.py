@@ -5,12 +5,18 @@ from typing import List
 
 app = FastAPI()
 
+# host: 74.63.237.2
+# port: 3306
+# database: salburtechnology_fmb
+# username: salburtechnology_fmb
+# password: Fmb515253!
+
 # Database connection settings
 DB_CONFIG = {
-    "host": "localhost",  # Change if using a remote DB
-    "user": "root",       # Update with actual username
-    "password": "",       # Update with actual password
-    "database": "mydatabase" #"salburtechnology_fmb"
+    "host": "74.63.237.2",  # Change if using a remote DB
+    "user": "salburtechnology_fmb",       # Update with actual username
+    "password": "Fmb515253!",       # Update with actual password
+    "database": "salburtechnology_fmb" #"salburtechnology_fmb"
 }
 
 def get_db_connection():
