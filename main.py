@@ -2,21 +2,16 @@ from fastapi import FastAPI, HTTPException
 import mysql.connector
 from pydantic import BaseModel
 from typing import List
+import os
 
 app = FastAPI()
 
-# host: 74.63.237.2
-# port: 3306
-# database: salburtechnology_fmb
-# username: salburtechnology_fmb
-# password: Fmb515253!
-
 # Database connection settings
 DB_CONFIG = {
-    "host": "74.63.237.2",  # Change if using a remote DB
-    "user": "salburtechnology_fmb",       # Update with actual username
-    "password": "Fmb515253!",       # Update with actual password
-    "database": "salburtechnology_fmb" #"salburtechnology_fmb"
+    "host": os.getenv('host'),  # Change if using a remote DB
+    "user": os.getenv('user'),       # Update with actual username
+    "password": os.getenv('password'),       # Update with actual password
+    "database": os.getenv('database') #"salburtechnology_fmb"
 }
 
 def get_db_connection():
