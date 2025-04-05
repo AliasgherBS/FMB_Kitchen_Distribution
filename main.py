@@ -3,8 +3,17 @@ import mysql.connector
 from pydantic import BaseModel
 from typing import List
 import os
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Database connection settings
 DB_CONFIG = {
