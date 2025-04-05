@@ -17,10 +17,10 @@ app.add_middleware(
 
 # Database connection settings
 DB_CONFIG = {
-    "host": os.getenv('host'),  # Change if using a remote DB
-    "user": os.getenv('user'),       # Update with actual username
-    "password": os.getenv('password'),       # Update with actual password
-    "database": os.getenv('database') #"salburtechnology_fmb"
+    "host": "74.63.237.2", #os.getenv('host'),  # Change if using a remote DB
+    "user":  "salburtechnology_fmb", #os.getenv('user'),       # Update with actual username
+    "password": "Fmb515253!", #os.getenv('password'),       # Update with actual password
+    "database": "salburtechnology_fmb" #os.getenv('database') #"salburtechnology_fmb"
 }
 
 def get_db_connection():
